@@ -1,0 +1,15 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block main %}
+    <h3>Plantel</h3>
+    <p>Estes foram os jogadores que ajudaram a conquistar o título, a comando do grande </p>
+    <ul>
+    {% for campeao in listaDeCampeoes %}
+        <li>{{ campeao }}</li>
+    {% endfor %}
+    </ul>
+    {% if "Coates" in listaDeCampeoes %}
+        <p>Liderados por El Capitán Seba Coates</p>
+    {% endif %} 
+    <p>O treinador {{ treinador }}</p>
+{% endblock %}

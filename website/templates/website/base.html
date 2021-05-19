@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{%  static  'website/css/base.css'  %}">
+</head>
+<body>
+ <header class="jumbotron text-center">
+     <h1>CAMPEÕES</h1>
+     <p>Tu és campeão</p>
+     <nav>
+         <a class="btn btn-info" href="{% url 'website:home' %}">Home</a>
+         <a class="btn btn-info" href="{% url 'website:pagina1' %}">Época</a>
+         <a class="btn btn-info" href="{% url 'website:pagina2' %}">Plantel</a>
+     </nav>
+ </header>
+    <article class="container">
+        <main class="col-sm-6">
+	        {% block main %}
+	        {% endblock main %}
+        </main>
+
+        <aside class="col-sm-6">
+            {% load static %}
+            <img src="{% static 'website/images/campeao.jpg' %}">
+        </aside>
+    </article>
+    <footer>Feito por um Campeão</footer>
+</body>
+</html>
